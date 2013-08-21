@@ -220,10 +220,11 @@ def lower(input):
 
 if __name__ == "__main__":
     bot = polbot()
-    conf = open('config.txt', o)
-	username = conf.readline()
-	password = conf.readline()
-	conf.close()
+    conf = open('config.txt', 'r')
+    username = conf.readline().strip()
+    password = conf.readline().strip()
+    import pdb; pdb.set_trace()
+    conf.close()
     bot.setState('default', bot.status)
     while True:
         try:
